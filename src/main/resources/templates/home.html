@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commonhead :: head"></head>
+<body>
+
+<div class="container">
+    <div class="text-center mb-3">
+        <p class="display-3">회원가입</p>
+    </div>
+
+    <!-- Form -->
+    <div align="center">
+        <form role="form" style="max-width: 580px;" class="mt-5">
+            <!-- userID -->
+            <div class="mb-4">
+                <div align="left">
+                    <small class="mb-0 font-weight-bold">공백을 포함하지 않는 6~20자의 영어 소문자, 숫자</small>
+                </div>
+                <div class="input-group input-group-lg">
+                    <input type="text" id="userId" placeholder="아이디" class="form-control">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-success" type="button" id="idCheck" disabled="disabled">중복확인</button>
+                    </div>
+                </div>
+                <div align="left">
+                    <small id="id-check"></small>
+                </div>
+            </div>
+
+            <!-- userPW -->
+            <div class="mb-4">
+                <div align="left">
+                    <small class="mb-0 font-weight-bold">공백을 포함하지 않는 영어 대,소문자, 특수문자, 숫자로 이루어진 10 ~ 20자</small>
+                </div>
+                <div class="input-group input-group-lg">
+                    <input type="password" id="userPW1" placeholder="비밀번호" class="form-control">
+                </div>
+                <div align="left">
+                    <small id="pw-check1"></small>
+                </div>
+            </div>
+
+            <!-- userPW check -->
+            <div class="mb-4">
+                <div class="input-group input-group-lg">
+                    <input type="password" id="userPW2" placeholder="비밀번호확인" class="form-control">
+                </div>
+                <div align="left">
+                    <small id="pw-check2"></small>
+                </div>
+            </div>
+
+            <!-- userEMAIL -->
+            <div class="mb-4">
+                <div class="input-group input-group-lg">
+                    <input type="email" id="userEmail" placeholder="xxx@xxx.com" class="form-control">
+                </div>
+                <div align="left">
+                    <small id="email-check"></small>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <button type="button" id="memberJoinBtn" class="btn btn-primary btn-lg">회원가입</button>
+                <button type="reset" class="btn btn-secondary btn-lg">재작성</button>
+            </div>
+        </form>
+
+    </div>
+    <!-- Form end -->
+
+</div>
+
+<div th:replace="fragments/commonfooter :: script"></div>
+</body>
+</html>
